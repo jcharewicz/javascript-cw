@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS lab 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <main>
+
+
+        <div class="button">
+            <button id="1" onclick="sumTxtBoxes();">Przelicz</button>
+        </div>
+
+        <table width="180px" style="background-color: black;">
+            <tr>
+                <td><input class="txt" id="txtbox1" type="text" name="txt1"/></td>
+            </tr>
+            <tr>    
+                <td><input class="txt" id="txtbox2" type="text" name="txt2"/></td>
+            </tr>
+            <tr> 
+                <td><input class="txt" id="txtbox3" type="text" name="txt3"/></td>
+            </tr> 
+            <tr>  
+                <td><input class="txt" id="txtbox4" type="text" name="txt4"/></td>
+            </tr>
+        </table>
+
+
+    </main>
+
+<script type="text/javascript">    
+
+function sumTxtBoxes(){
+
+    const txtbox1val = document.getElementById("txtbox1").value;
+    const txtbox2val = document.getElementById("txtbox2").value;
+    const txtbox3val = document.getElementById("txtbox3").value;
+    const txtbox4val = document.getElementById("txtbox4").value;
+
+    const output = parseInt(txtbox1val) + parseInt(txtbox2val) + parseInt(txtbox3val) + parseInt(txtbox4val);
+
+    alert(Number(output));
+
+
+   }
+
+
+
+
+
+// const input = document.createElement('input');
+// input.setAttribute("type","text");
+// document.body.appendChild(input);
+
+
+</script>
+
+
+</body>
+
+
+</html>
