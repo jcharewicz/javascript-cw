@@ -10,53 +10,123 @@
    
     <main>
 
+        <div class="container">
 
         <div class="button">
-            <button id="1" onclick="sumTxtBoxes();">Przelicz</button>
+            <button id="button1" onclick="sumOfInputNumbers();meanOfInputNumbers();maxvalOfInputNumbers();minvalOfInputNumbers();"
+            >Calculate</button>
         </div>
 
-        <table width="180px" style="background-color: black;">
+            <table width="250px" >
             <tr>
-                <td><input class="txt" id="txtbox1" type="text" name="txt1"/></td>
+                <td><label for="sum">First val:</label></td>
+                <td><input class="input" id="number1" type="number"/></td>
             </tr>
             <tr>    
-                <td><input class="txt" id="txtbox2" type="text" name="txt2"/></td>
+                <td><label for="sum">Sec val:</label></td>
+                <td><input class="input" id="number2" type="number"/></td>
             </tr>
             <tr> 
-                <td><input class="txt" id="txtbox3" type="text" name="txt3"/></td>
+                <td><label for="sum">Third val:</label></td>
+                <td><input class="input" id="number3" type="number"/></td>
             </tr> 
             <tr>  
-                <td><input class="txt" id="txtbox4" type="text" name="txt4"/></td>
+                <td><label for="sum">Fourth val:</label></td>
+                <td><input class="input" id="number4" type="number"/></td>
             </tr>
-        </table>
+            </table>
+            <br>    
 
+            <table width="250px">
+            <tr>
+                <td><label for="sum">Sum:</label></td>
+                <td><output class="output" id="sum" type="number"></td>
+            </tr>
+            <tr>    
+                <td><label for="mean">Mean:</label></td>
+                <td><output class="output" id="mean" type="number"></td>
+            </tr>
+            <tr> 
+                <td><label for="maxval">Max Value:</label></td>
+                <td><output class="output" id="maxval" type="number"></td>
+            </tr> 
+            <tr>  
+                <td><label for="minval">Min Value:</label></td>
+                <td><output class="output" id="minval" type="number"></td>
+            </tr>
+            </table>
+
+        </div>
 
     </main>
 
 <script type="text/javascript">    
 
-function sumTxtBoxes(){
+const inputs = document.querySelectorAll('.input')
 
-    const txtbox1val = document.getElementById("txtbox1").value;
-    const txtbox2val = document.getElementById("txtbox2").value;
-    const txtbox3val = document.getElementById("txtbox3").value;
-    const txtbox4val = document.getElementById("txtbox4").value;
+const sumofNumbers = document.querySelector('#sum')
+const meanofNumbers = document.querySelector('#mean')
+const maxvalofNumbers = document.querySelector('#maxval')
+const minvalofNumbers = document.querySelector('#minval')
 
-    const output = parseInt(txtbox1val) + parseInt(txtbox2val) + parseInt(txtbox3val) + parseInt(txtbox4val);
+let tmpSum = 0;
+let tmpMean = 0;
+let tmpSumtoMean = 0;
 
-    alert(Number(output));
+const nums = [];
+const nums2 = [];
 
+function sumOfInputNumbers()
+{
+    inputs.forEach(element =>
+    {
+        tmpSum += Number(element.value);
+    });
+    
+    sumofNumbers.value = tmpSum;
 
-   }
+    tmpSumtoMean = tmpSum;
 
+    tmpSum = 0;
 
+}
 
+function meanOfInputNumbers()
+{
+    inputs.forEach(element =>
+    {
+        tmpMean = tmpSumtoMean/inputs.length;
+    });
+    
+    meanofNumbers.value = tmpMean;
+    tmpMean = 0;
+    tmpSumtoMean = 0;
+}
 
+function maxvalOfInputNumbers()
+{
+    inputs.forEach(element =>
+    {
+        nums.push(Number(element.value));
+    });
 
-// const input = document.createElement('input');
-// input.setAttribute("type","text");
-// document.body.appendChild(input);
+    maxvalofNumbers.value = Math.max(...nums);
 
+    nums.length = 0;
+
+}
+
+function minvalOfInputNumbers()
+{
+    inputs.forEach(element =>
+    {
+        nums2.push(Number(element.value));
+    });
+
+    minvalofNumbers.value = Math.min(...nums2);
+
+    nums2.length = 0;
+}
 
 </script>
 
