@@ -1,0 +1,102 @@
+body {
+	background-color: #f1f1f1;
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.form-container {
+	background-color: #fff;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+button {
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+.note {
+	background-color: #fff;
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.note h2 {
+	margin-top: 0;
+}
+
+.note p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.pin {
+	background-color: #ffffcc;
+}
+
+.note-color {
+	margin-right: 10px;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.note-date {
+	color: #999;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+.note-actions {
+	text-align: right;
+	margin-top: 10px;
+}
+
+.note-actions button {
+	background-color: #f44336;
+	color: #fff;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.note-actions button:hover {
+	background-color: #da190b;
+}
