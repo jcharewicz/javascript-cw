@@ -33,8 +33,8 @@ function startAnimation() {
     const ball = new Ball(
       Math.random() * canvas.width,
       Math.random() * canvas.height,
-      Math.random() * 10 - 5,
-      Math.random() * 10 - 5,
+      Math.random() * 1000,
+      Math.random() * 1000,
       Math.random() * 10 + 10
     );
     balls.push(ball);
